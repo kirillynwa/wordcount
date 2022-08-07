@@ -15,16 +15,8 @@ func main() {
 
 // readInput reads pattern and source string
 // from command line arguments and returns them.
-func readInput() (src string, err error) {
+func readInput() (src string) {
 	src = os.Args[1]
-	if src == "" {
-		return src, errors.New("missing string to match")
-	}
-	return src, nil
+	return src
 }
 
-// fail prints the error and exits.
-func fail(err error) {
-	fmt.Println("match:", err)
-	os.Exit(1)
-}
