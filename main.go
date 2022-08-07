@@ -8,10 +8,7 @@ import (
 )
 
 func main() {
-	src, err := readInput()
-	if err != nil {
-		fail(err)
-	}
+	src := readInput()
 	words := strings.Fields(src)
 	fmt.Println(len(words))
 }
